@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 40px;">
+
+<p>Tap to connect</p>
+
+<button onclick="go()" style="padding:15px; font-size:16px;">
+Connect to WiFi
+</button>
+
+<audio id="a" src="welcome.mp3"></audio>
+
+<script>
+function go() {
+  document.getElementById('a').play();
+  const wifi = "WIFI:T:WPA;S:YOUR_WIFI_NAME;P:YOUR_WIFI_PASSWORD;;";
+  window.location.href = "data:text/plain," + encodeURIComponent(wifi);
+}
+</script>
+
+</body>
+</html>
